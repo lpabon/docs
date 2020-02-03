@@ -36,3 +36,4 @@
     - [Functional Testing](functional-testing.md)
 - [Drivers](drivers.md)
 - [Troubleshooting](troubleshooting.md)
+- [CSI Extension Specification](csi-ext-spec.md)
