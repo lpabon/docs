@@ -1,4 +1,4 @@
-# Kubernetes CSI Specification Extension
+# Kubernetes CSI Specification Extensions
 The following documentation describes the extensions to the [CSI
 Specification](https://github.com/container-storage-interface/spec/blob/master/spec.md)
 for Kubernetes features.
