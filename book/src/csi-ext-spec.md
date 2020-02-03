@@ -52,6 +52,12 @@ ephemeral volume is requested. The driver will create and publish the volume
 to the specified location as noted in the _NodePublishVolume_ request. Size of
 the volume will __XXX__TBD.
 
+<!-- From pohly -->
+There is no guarantee that NodePublishVolume will be called again after a
+failure, regardless of what the failure is. To avoid leaking resources, a CSI
+driver must either always free all resources before returning from
+NodePublishVolume or implement some kind of garbage collection.
+
 #### [NodeUnpublishVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodeunpublishvolume)
 
 ##### Arguments
