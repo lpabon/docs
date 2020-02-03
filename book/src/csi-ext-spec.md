@@ -45,12 +45,24 @@ driver to delete the volume.
 * **volume_context["csi.storage.k8s.io/ephemeral"]**: This value will be
   available and it will be equal to `"true"`.
 
-##### Expectation
+##### Workflow
 
 The driver will receive the appropriate arguments as defined above when an
 ephemeral volume is requested. The driver will create and publish the volume
 to the specified location as noted in the _NodePublishVolume_ request. Size of
 the volume will __XXX__TBD.
+
+#### [NodeUnpublishVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodeunpublishvolume)
+
+##### Arguments
+
+No changes
+
+##### Workflow
+
+The driver is responsible of deleting the ephemeral volume once it has
+unpublished the volume. It MAY delete the volume before finishing the request,
+or after the request to unpublish is returned.
 
 ## References
 
